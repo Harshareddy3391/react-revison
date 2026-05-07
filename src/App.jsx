@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './home'
+import Home from './navbar/home'
 import Navbar from './navbar/nav'
 
 const App = () => {

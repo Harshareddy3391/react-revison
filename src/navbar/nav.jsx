@@ -3,9 +3,9 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div>
-        <nav>
+        <nav className='navbar navbar-dark bg-dark navbar-expand-lg'>
             
-            <ul>
+            <ul className='btn btn-primary'>
                 <li>home</li>
                 <li>about</li>
                 <li>contact</li>
