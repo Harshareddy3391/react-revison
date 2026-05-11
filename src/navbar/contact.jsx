@@ -27,6 +27,28 @@ const Contact = () => {
     <div>
       <h1>Contact page</h1>
       <pre>{JSON.stringify(data)}</pre>
+      {
+        data.length > 0  ?  <>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((contact) => (
+              <tr key={contact.id}>
+                <td>{contact.name}</td>
+                <td>{contact.email}</td>
+                <td>{contact.phone}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        </> : <h1>No data available</h1>
+      }
 
 
       
