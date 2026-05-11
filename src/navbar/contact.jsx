@@ -4,13 +4,14 @@ usage :
 
 
 import React from 'react'
-import { useEffect } from 'react'
+//import { useEffect } from 'react'
 
 const Contact = () => {
 
-    useEffect()
+   
   return (
     <div>
+      <h1>Contact page</h1>
 
 
       
