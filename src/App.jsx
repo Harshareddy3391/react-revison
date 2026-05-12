@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Navbar from './Navbar'
-import Contact from './contact'
+import Navbar from './navbar/nav'
+import Contact from './navbar/contact'
 
 const Home = () => {
   return <h1>Home Page</h1>
