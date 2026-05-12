@@ -7,7 +7,9 @@ const Contact = () => {
 
   useEffect(() => {
 
-    axios.get("https://gist.githubusercontent.com/narasimhareddyprostack/7e344f346f47bc53a889d78b5258d0c9/raw/56d531cb936d9c79e2417e5d0e5d8c9c876800f2/contactlist")
+    axios.get(
+      "https://gist.githubusercontent.com/narasimhareddyprostack/7e344f346f47bc53a889d78b5258d0c9/raw/56d531cb936d9c79e2417e5d0e5d8c9c876800f2/contactlist"
+    )
 
       .then((res) => {
         setData(res.data)
@@ -20,10 +22,14 @@ const Contact = () => {
   }, [])
 
 
-  let contactinfp = ( ) => {
-    alert("Contact Info")
-    return <>
-    </>
+  let contactinfo = (contact) => {
+
+    alert(`
+      Name : ${contact.name.first}
+      Email : ${contact.email}
+      Phone : ${contact.cell}
+    `)
+
   }
 
   return (
@@ -31,7 +37,6 @@ const Contact = () => {
     <div className='container mt-5'>
 
       <h1>Contact Page</h1>
-      
 
       {
         data.length > 0 ?
@@ -46,6 +51,7 @@ const Contact = () => {
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
+
               </tr>
 
             </thead>
@@ -53,9 +59,12 @@ const Contact = () => {
             <tbody>
 
               {
-                data.map((contact,index) => (
+                data.map((contact, index) => (
 
-                  <tr key={index} onClick={contactinfo}>
+                  <tr
+                    key={index}
+                    onClick={() => contactinfo(contact)}
+                  >
 
                     <td>{index + 1}</td>
 
