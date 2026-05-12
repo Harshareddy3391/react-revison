@@ -19,11 +19,19 @@ const Contact = () => {
 
   }, [])
 
+
+  let contactinfp = ( ) => {
+    alert("Contact Info")
+    return <>
+    </>
+  }
+
   return (
 
     <div className='container mt-5'>
 
       <h1>Contact Page</h1>
+      
 
       {
         data.length > 0 ?
@@ -33,6 +41,8 @@ const Contact = () => {
             <thead>
 
               <tr>
+
+                <th>S.No</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
@@ -45,13 +55,15 @@ const Contact = () => {
               {
                 data.map((contact,index) => (
 
-                  <tr key={index}>
+                  <tr key={index} onClick={contactinfo}>
 
-                    <td>{contact.first}</td>
+                    <td>{index + 1}</td>
 
-                    <td>{contact.sound}</td>
+                    <td>{contact.name.first}</td>
 
-                    <td>{contact.title}</td>
+                    <td>{contact.email}</td>
+
+                    <td>{contact.cell}</td>
 
                   </tr>
 
