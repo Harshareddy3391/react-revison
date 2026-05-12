@@ -47,11 +47,11 @@ const Contact = () => {
 
                   <tr key={index}>
 
-                    <td>{contact.name}</td>
+                    <td>{contact.first}</td>
 
-                    <td>{contact.email}</td>
+                    <td>{contact.sound}</td>
 
-                    <td>{contact.phone}</td>
+                    <td>{contact.title}</td>
 
                   </tr>
 
