@@ -20,6 +20,26 @@ const Navbar = () => {
 
           </li>
 
+          <li className='nav-item me-2'>
+
+            <Link to='/login'>
+              <button className='btn btn-primary'>
+                Login
+              </button>
+            </Link>
+
+          </li>
+
+          <li className='nav-item me-2'>
+
+            <Link to='/register'>
+              <button className='btn btn-primary'>
+                Register
+              </button>
+            </Link>
+
+          </li>
+
           <li className='nav-item'>
 
             <Link to='/contact'>
